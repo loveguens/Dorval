@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Love My Love</title>
+  <title>Matrix - My Love</title>
   <style>
     html, body {
       margin: 0;
@@ -11,6 +11,22 @@
       background: black;
       height: 100%;
     }
+      
+
+    /* Texte central "Ma future femme" */
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #00ffff;
+      font-size: 28px;
+      font-weight: bold;
+      z-index: 3;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      animation: blink 2s ease-in-out infinite;
+    }
+
 
     canvas {
       position: absolute;
@@ -22,6 +38,7 @@
 </head>
 <body>
   <canvas id="matrix"></canvas>
+  <div class="center-text">Ma future femme</div>
 
   <script>
     const canvas = document.getElementById('matrix');
@@ -31,9 +48,9 @@
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
-    const text = "My Love"; // texte à afficher
-    const fontSize = 20;
-    const columns = Math.floor(canvas.width / (fontSize * 6)); // chaque "My Love" prend plus de largeur
+    const text = "Bonne fête "; // texte à afficher
+    const fontSize = 40;
+    const columns = Math.floor(canvas.width / (fontSize * 3)); // chaque "My Love" prend plus de largeur
 
     const drops = Array(columns).fill(1);
 
